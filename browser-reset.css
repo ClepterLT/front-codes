@@ -23,3 +23,7 @@ body {
   color: #6D5D4B;
   font-weight: 300;
   line-height: 1.6; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
