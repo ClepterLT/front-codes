@@ -14,9 +14,7 @@ function smoothAnchorScrolls() {
             if (!hash || hash.length < 1) {
                 return;
             }
-            console.log("HASH:", hash);
             const theWhat = document.body.querySelector(hash[0]);
-            console.log("theWhat:", theWhat);
             if (!theWhat) {
                 return;
             }
