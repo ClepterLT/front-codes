@@ -8,7 +8,7 @@ function colorActiveAnchorLink () {
   }
   
   const handleIntersection = function(entries) {
-        entries.forEach(function(entry, index) {
+        entries.forEach(function(entry) {
             if(entry.isIntersecting) {
                 const intersectingParagraph = entry.target;
                 const intersectingParagraphId = `#${intersectingParagraph.getAttribute('id')}`;
@@ -24,4 +24,11 @@ function colorActiveAnchorLink () {
     }
   
   const linkObserver = new IntersectionObserver(handleIntersection, options);
+  
+  textParagraphs.forEach(function(p) {
+        const paragraphId = p.getAttribute('id');
+        if(paragraphId) {
+            linkObserver.observe(p);
+        }
+    });
 }
