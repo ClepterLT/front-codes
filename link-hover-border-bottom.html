@@ -1,0 +1,32 @@
+### HTML ###
+<nav class="nav-header">
+  <ul class="nav-header__list" id="nav-list">
+    <li class="nav-header__item"><a href="#" class="nav-header__link">Home</a></li>
+  </ul>
+</nav>
+
+
+### SCSS ###
+&__link:link,
+  &__link:visited {
+      color: $color-secondary;
+      text-decoration: none;
+  }
+
+  &__link::after {
+      display: block;
+      content: "";
+      width: 0;
+      visibility: hidden;
+      opacity: 0;
+      height: 3px;
+      background-color: $color-secondary;
+      transition: width .3s;
+  }
+
+  &__link:hover::after,
+  &__link:active::after {
+      width: 100%;
+      visibility: visible;
+      opacity: 1;
+}
