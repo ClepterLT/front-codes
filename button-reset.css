@@ -3,20 +3,22 @@ button {
   box-shadow: 0px 0px 0px transparent;
   border: 0px solid transparent;
   text-shadow: 0px 0px 0px transparent;
-}
-
-button:hover {
-  background: transparent;
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
-}
-
-button:active {
-  outline: none;
-  border: none;
-}
-
-button:focus {
-  outline: 0;
+  font-family: inherit;
+  font-size; inherit;
+  
+  &:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+  }
+  
+  &:active {
+    outline: none;
+    border: none;
+  }
+  
+  &:focus {
+    outline: 0;
+  }
 }
