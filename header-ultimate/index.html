@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <meta name="description" content="PP Creations components">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      
+      <title>Header Ultimate</title>
+
+      <script defer src="script.js"></script>
+    </head>
+<body>
+  
+  <svg style="width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-pacman" viewBox="0 0 32 32">
+        <title>pacman</title>
+        <path d="M30.148 5.588c-2.934-3.42-7.288-5.588-12.148-5.588-8.837 0-16 7.163-16 16s7.163 16 16 16c4.86 0 9.213-2.167 12.148-5.588l-10.148-10.412 10.148-10.412zM22 3.769c1.232 0 2.231 0.999 2.231 2.231s-0.999 2.231-2.231 2.231-2.231-0.999-2.231-2.231c0-1.232 0.999-2.231 2.231-2.231z"></path>
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 32 32">
+        <path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 32 32">
+        <path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
+      </symbol>
+    </defs>
+  </svg>
+  
+  <header class="header">
+
+      <div class="row__header">
+
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <svg class="logo__img"><use xlink:href="#icon-pacman"></use></svg>
+          </a></div>
+
+        <nav class="nav-header">
+          <ul class="nav-header__list" id="nav-list">
+            <li class="nav-header__item"><a href="home.html" class="nav-header__link">Pagrindinis</a></li>
+            <li class="nav-header__item"><a href="products.html" class="nav-header__link">Produktai</a></li>
+            <li class="nav-header__item"><a href="aboutus.html" class="nav-header__link">Apie mus</a></li>
+            <li class="nav-header__item"><a href="contact.html" class="nav-header__link">Kontaktai</a></li>
+          </ul>
+          <a href="products.html" class="button">Produktai</a>
+        </nav>
+
+        <button type="button" class="nav-header__button">
+          <svg class="nav-header__icon js-icon-open"><use xlink:href="#icon-menu"></use></svg>
+          <svg class="nav-header__icon js-icon-close js-icon-hidden"><use xlink:href="#icon-close"></use></svg>
+        </button>
+        
+        <nav class="nav-header--mobile">
+          <ul class="nav-header--mobile__list" id="nav-list">
+            <li class="nav-header--mobile__item"><a href="home.html" class="nav-header--mobile__link">Pagrindinis</a></li>
+            <li class="nav-header--mobile__item"><a href="products.html" class="nav-header--mobile__link">Produktai</a></li>
+            <li class="nav-header--mobile__item"><a href="aboutus.html" class="nav-header--mobile__link">Apie mus</a></li>
+            <li class="nav-header--mobile__item"><a href="contact.html" class="nav-header--mobile__link">Kontaktai</a></li>
+          </ul>
+          <a href="products.html" class="button">Produktai</a>
+        </nav>
+
+      </div>
+
+  </header>
+
+</body>
+</html>
