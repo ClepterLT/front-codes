@@ -1,0 +1,150 @@
+// --- COLORS --- //
+$c-primary: #ed6f67;
+$c-text: #333333;
+$c-link: #333333;
+$c-hover: #cacdd2;
+$c-white: #fff;
+
+// --- MEDIA QUERY MANAGER --- //
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == br1200 {
+        @media only screen and (max-width: 75em) {
+            @content;
+        } //1200px
+    }
+
+    @if $breakpoint == base {
+        @media only screen and (max-width: 71.25em) {
+            @content;
+        } //1140px
+    }
+
+    @if $breakpoint == br1060 {
+        @media only screen and (max-width: 66.25em) {
+            @content;
+        } //1060px
+    }
+
+    @if $breakpoint == br930 {
+        @media only screen and (max-width: 58.125em) {
+            @content;
+        } //930px
+    }
+
+    @if $breakpoint == br820 {
+        @media only screen and (max-width: 51.25em) {
+            @content;
+        } //820px
+    }
+
+    @if $breakpoint == br680 {
+        @media only screen and (max-width: 42.5em) {
+            @content;
+        } //680px
+    }
+
+    @if $breakpoint == br1800 {
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        } //1800px
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include respond(br1200) {
+        html {
+            font-size: 56.25%;
+        }
+    }
+
+    @include respond(br1060) {
+        html {
+            font-size: 50%;
+        }
+    }
+
+    @include respond(br1800) {
+        html {
+            font-size: 75%;
+        }
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    color: $c-text;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+button {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    font-family: inherit;
+    font-size: inherit;
+
+    &:hover {
+        background: transparent;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+        cursor: pointer;
+    }
+
+    &:active {
+        outline: none;
+        border: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+
+    &__header {
+        max-width: 128rem;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        @include respond(base) {
+            justify-content: space-between;
+        }
+    }
+}
