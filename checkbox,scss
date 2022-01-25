@@ -1,0 +1,32 @@
+input[type="checkbox"] {
+  -webkit-appearance: none !important;
+  width: 1.25rem;
+  height: 1.25rem;
+  outline: 1px solid $c-light-grey !important;
+  border-radius: 3px;
+
+  &:active,
+  &:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  }
+
+  &:checked {
+    background-color: $c-blue;
+    outline: 0 !important;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: $c-simple-white !important;
+    position: relative;
+  }
+
+  &:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: 0px;
+    left: 3px;
+    color: $c-simple-white;
+  }
+}
