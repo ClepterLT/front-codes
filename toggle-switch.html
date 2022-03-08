@@ -1,0 +1,50 @@
+### HTML ###
+<label class="btn-toggle">
+  <input type="checkbox">
+  <span></span>
+</label>
+
+### CSS ###
+<style>
+.btn-toggle {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 25px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  span {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $c-slate-grey-1;
+    border-radius: 30px;
+    transition: 0.4s;
+  }
+
+  span::before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: $c-cyan-3;
+    left: 0;
+    bottom: 0;
+    transition: 0.4s;
+  }
+
+  input:checked + span::before {
+    transform: translateX(23px);
+    background-color: $c-electric-green;
+  }
+}
+</style>
